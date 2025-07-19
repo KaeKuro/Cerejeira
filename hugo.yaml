@@ -1,0 +1,64 @@
+# Hydra file config.
+# -------------------⟩
+
+# Configurações básicas ----⟩
+baseURL: https://kaelux.netlify.app/ # Url padrão.
+languageCode: pt-br # Linguagem.
+theme: hextra # Tema.
+title: "Vale das Cerejeiras" # Título.
+# --------------------------⟩
+
+
+# Parâmetros ---------------------------------------------⟩
+params:
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+
+
+  theme:
+    default: dark # Tema padrão.
+    displayToggle: true # Mudar de tema.
+
+  navbar:
+    displayTitle: true # Título.
+    displayLogo: true # Logo.
+    logo:
+      path: logos/CherryIcon-dark.svg
+      dark: logos/CherryIcon-white.svg
+      link: /
+      width: 25
+      height: 0
+
+  search:
+    enable: true # Barra de busca.
+    type: flexsearch # Tipo.
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      tokenize: forward
+# --------------------------------------------------------⟩
+
+
+# Menu -------------------------------------⟩
+menu:
+  main:
+    - name: "Cargos"
+      weight: 1
+      pageRef: /cargos/
+      
+
+    - name: Search
+      weight: 2
+      params:
+        type: search
+
+  sidebar:
+    - name: "Novidades em breve"
+      params:
+        type: separator
+      weight: 1
+# ------------------------------------------⟩
